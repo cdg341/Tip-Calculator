@@ -5,12 +5,24 @@ let ppl = document.getElementById("ppl");
 let total = document.getElementById("tipTotal");
 let reset = document.getElementById("reset");
 
+ppl.onkeydown = function (e) {
+  e.preventDefault();
+};
+
 //Loop through buttons and add event listener
 tipButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
+    //If user doesn't put in bill amount or number of people
     if (ppl.value === "0") {
       alert("Please enter number of people greater than 0");
+      ppl.style.border = "1px solid red";
+    } else if (billMoney.value === "") {
+      alert("Please enter a bill amount");
+      billMoney.style.border = "1px solid red";
     } else {
+      billMoney.style.border = "1px solid black";
+      ppl.style.border = "1px solid black";
+
       //Use of switch statement to calculate and show amounts
       switch (button.textContent) {
         case "5%":
