@@ -32,7 +32,7 @@
             <button type="submit" class="tipBtn">15%</button>
             <button type="submit" class="tipBtn">25%</button>
             <button type="submit" class="tipBtn">50%</button>
-            <button type="submit" class="tipCustom">Custom</button>
+            <input class="tipCustom" type="tel" placeholder="Custom" />
           </div>
         </div>
         <div class="people">
@@ -42,11 +42,14 @@
       </div>
       <div class="tipContainer">
         <div class="group1">
-          <label>Tip Amount</label>
+          <div>
+            <label>Tip Amount</label>
+            <label style="display: block; font-size: 11px">/ person</label>
+          </div>
           <label id="tipMoney">0.00</label>
         </div>
         <div class="group2">
-          <label>Total</label>
+          <label>Total Bill</label>
           <label id="tipTotal">0.00</label>
         </div>
         <div class="resetButton">

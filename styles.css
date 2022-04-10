@@ -154,3 +154,13 @@ span::before {
   left: 10px;
   line-height: 46px;
 }
+
+.tipCustom::placeholder {
+  text-align: center;
+  color: white;
+  opacity: 100%;
+}
+
+.tipCustom {
+  text-align: center;
+}

@@ -52,28 +52,28 @@ tipButtons.forEach((button) => {
 
 //Functions for calculations
 function fivePercent() {
-  total.textContent = (billMoney.value * 0.05).toFixed(2);
-  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+  tipMoney.textContent = ((billMoney.value * 0.05) / ppl.value).toFixed(2);
+  total.textContent = (Number(billMoney.value) * 0.05 + Number(billMoney.value)).toFixed(2);
 }
 
 function tenPercent() {
-  total.textContent = (billMoney.value * 0.1).toFixed(2);
-  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+  tipMoney.textContent = ((billMoney.value * 0.1) / ppl.value).toFixed(2);
+  total.textContent = (Number(billMoney.value) * 0.1 + Number(billMoney.value)).toFixed(2);
 }
 
 function fifteenPercent() {
-  total.textContent = (billMoney.value * 0.15).toFixed(2);
-  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+  tipMoney.textContent = ((billMoney.value * 0.15) / ppl.value).toFixed(2);
+  total.textContent = (Number(billMoney.value) * 0.15 + Number(billMoney.value)).toFixed(2);
 }
 
 function twentyfivePercent() {
-  total.textContent = (billMoney.value * 0.25).toFixed(2);
-  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+  tipMoney.textContent = ((billMoney.value * 0.25) / ppl.value).toFixed(2);
+  total.textContent = (Number(billMoney.value) * 0.25 + Number(billMoney.value)).toFixed(2);
 }
 
 function fiftyPercent() {
-  total.textContent = (billMoney.value * 0.5).toFixed(2);
-  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+  tipMoney.textContent = ((billMoney.value * 0.5) / ppl.value).toFixed(2);
+  total.textContent = (Number(billMoney.value) * 0.5 + Number(billMoney.value)).toFixed(2);
 }
 
 //Reset button to clear app
