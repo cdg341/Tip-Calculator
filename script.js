@@ -14,24 +14,19 @@ tipButtons.forEach((button) => {
       //Use of switch statement to calculate and show amounts
       switch (button.textContent) {
         case "5%":
-          total.textContent = (billMoney.value * 0.05).toFixed(2);
-          tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+          fivePercent();
           break;
         case "10%":
-          total.textContent = (billMoney.value * 0.1).toFixed(2);
-          tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+          tenPercent();
           break;
         case "15%":
-          total.textContent = (billMoney.value * 0.15).toFixed(2);
-          tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+          fifteenPercent();
           break;
         case "25%":
-          total.textContent = (billMoney.value * 0.25).toFixed(2);
-          tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+          twentyfivePercent();
           break;
         case "50%":
-          total.textContent = (billMoney.value * 0.5).toFixed(2);
-          tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+          fiftyPercent();
       }
     }
 
@@ -54,6 +49,32 @@ tipButtons.forEach((button) => {
     } */
   });
 });
+
+//Functions for calculations
+function fivePercent() {
+  total.textContent = (billMoney.value * 0.05).toFixed(2);
+  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+}
+
+function tenPercent() {
+  total.textContent = (billMoney.value * 0.1).toFixed(2);
+  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+}
+
+function fifteenPercent() {
+  total.textContent = (billMoney.value * 0.15).toFixed(2);
+  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+}
+
+function twentyfivePercent() {
+  total.textContent = (billMoney.value * 0.25).toFixed(2);
+  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+}
+
+function fiftyPercent() {
+  total.textContent = (billMoney.value * 0.5).toFixed(2);
+  tipMoney.textContent = (total.textContent / ppl.value).toFixed(2);
+}
 
 //Reset button to clear app
 reset.addEventListener("click", () => {
