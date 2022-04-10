@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="title">
+      <header>
+        <h1>splitter</h1>
+      </header>
+    </div>
+    <div class="container">
+      <div class="billContainer">
+        <div class="bill">
+          <label for="bill" id="bill">Bill</label>
+          <span></span><input type="tel" id="billInput" placeholder="0.00" />
+        </div>
+        <div class="tipAmount">
+          <label>Select Tip %</label>
+          <div class="buttons">
+            <button type="submit" class="tipBtn">5%</button>
+            <button type="submit" class="tipBtn">10%</button>
+            <button type="submit" class="tipBtn">15%</button>
+            <button type="submit" class="tipBtn">25%</button>
+            <button type="submit" class="tipBtn">50%</button>
+            <button type="submit" class="tipCustom">Custom</button>
+          </div>
+        </div>
+        <div class="people">
+          <label for="ppl">Number of People</label>
+          <input type="number" id="ppl" value="0" min="1" required />
+        </div>
+      </div>
+      <div class="tipContainer">
+        <div class="group1">
+          <label>Tip Amount</label>
+          <label id="tipMoney">0.00</label>
+        </div>
+        <div class="group2">
+          <label>Total</label>
+          <label id="tipTotal">0.00</label>
+        </div>
+        <div class="resetButton">
+          <button type="reset" id="reset">RESET</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

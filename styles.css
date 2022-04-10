@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  margin-top: 150px;
+}
+
+.title h1 {
+  margin: 0 auto;
+  width: 145px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  word-break: break-all;
+  color: hsl(183, 100%, 15%);
+  padding-bottom: 50px;
+}
+
+.container {
+  background-color: white;
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 4px grey;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bill,
+.people,
+input {
+  color: hsl(183, 100%, 15%);
+}
+
+#bill {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#billInput,
+#ppl {
+  font-size: 24px;
+  border: 1px solid black;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  text-align: right;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+.people label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tipAmount {
+  margin-bottom: 50px;
+}
+
+.tipAmount label {
+  color: hsl(183, 100%, 15%);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.tipBtn,
+.tipCustom {
+  font-size: 18px;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 0;
+  width: 100px;
+  margin: 0;
+}
+
+.tipContainer {
+  background-color: hsl(183, 100%, 15%);
+  width: 350px;
+  height: 320px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.group1,
+.group2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group1 label {
+  margin-bottom: 60px;
+  color: white;
+  font-size: 12px;
+}
+
+.group2 label {
+  color: white;
+  font-size: 12px;
+}
+
+#tipMoney,
+#tipTotal {
+  color: hsl(172, 67%, 45%);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#tipMoney::before,
+#tipTotal::before {
+  content: "$";
+}
+
+.resetButton button {
+  padding: 8px 110px;
+  margin-top: 95px;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.resetButton {
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  display: block;
+  position: relative;
+}
+
+span::before {
+  content: "$";
+  position: absolute;
+  display: block;
+  height: 100%;
+  top: -6px;
+  left: 10px;
+  line-height: 46px;
+}
