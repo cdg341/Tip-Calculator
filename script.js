@@ -4,21 +4,24 @@ let tipButtons = document.querySelectorAll(".tipBtn");
 let ppl = document.getElementById("ppl");
 let total = document.getElementById("tipTotal");
 let reset = document.getElementById("reset");
+let customBtn = document.querySelector(".tipCustom");
 
-ppl.onkeydown = function (e) {
+/* ppl.onkeydown = function (e) {
   e.preventDefault();
 };
-
+ */
 //Loop through buttons and add event listener
 tipButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     //If user doesn't put in bill amount or number of people
-    if (billMoney.value === "") {
+    if (billMoney.value === "" || isNaN(billMoney.value)) {
       alert("Please enter a bill amount");
+      billMoney.value = "";
       billMoney.style.border = "1px solid red";
-    } else if (ppl.value === "0") {
-      alert("Please enter number of people greater than 0");
+    } else if (ppl.value === "" || isNaN(ppl.value)) {
+      alert("Please enter a number of people");
       ppl.style.border = "1px solid red";
+      ppl.value = "1";
     } else {
       billMoney.style.border = "1px solid black";
       ppl.style.border = "1px solid black";
@@ -41,24 +44,6 @@ tipButtons.forEach((button) => {
           fiftyPercent();
       }
     }
-
-    //How to do the same using if statement
-    /* if (button.textContent === "5%") {
-      total.textContent = billMoney.value * 0.05;
-      tipMoney.textContent = total.textContent / ppl.value;
-    } else if (button.textContent === "10%") {
-      total.textContent = billMoney.value * 0.1;
-      tipMoney.textContent = total.textContent / ppl.value;
-    } else if (button.textContent === "15%") {
-      total.textContent = billMoney.value * 0.15;
-      tipMoney.textContent = total.textContent / ppl.value;
-    } else if (button.textContent === "25%") {
-      total.textContent = billMoney.value * 0.25;
-      tipMoney.textContent = total.textContent / ppl.value;
-    } else if (button.textContent === "50%") {
-      total.textContent = billMoney.value * 0.5;
-      tipMoney.textContent = total.textContent / ppl.value;
-    } */
   });
 });
 
@@ -88,10 +73,17 @@ function fiftyPercent() {
   total.textContent = (Number(billMoney.value) * 0.5 + Number(billMoney.value)).toFixed(2);
 }
 
+//Custom Tip input box event listener
+customBtn.addEventListener("input", () => {
+  tipMoney.textContent = ((billMoney.value * (customBtn.value / 100)) / ppl.value).toFixed(2);
+  total.textContent = (Number(billMoney.value) * (customBtn.value / 100) + Number(billMoney.value)).toFixed(2);
+});
+
 //Reset button to clear app
 reset.addEventListener("click", () => {
   billMoney.value = "";
   total.textContent = "0.00";
   tipMoney.textContent = "0.00";
+  customBtn.value = "";
   billMoney.focus();
 });
